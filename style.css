@@ -25,11 +25,13 @@ header{
 main{
     background: var(--black-color);
     margin: 0px auto;
+    min-height: 1225px;
 }
 .container{
     max-width: var(--width-content);
     margin: 0px auto; 
     margin-left: 15.7%;
+    margin-right: 12.2%;
 }
 .header__title{
     max-height: 34px;
@@ -44,3 +46,84 @@ main{
 /* --------------------------------------------------------------------- */
 /* main css prop */
 /* --------------------------------------------------------------------- */
+.main__container{
+    padding-top: 51px;
+    display: grid;
+    grid-template-rows: minmax(auto,auto) minmax(616px,auto);
+}
+.main__about-author{
+ display: grid;
+ grid-template-columns: minmax(auto,411px) minmax(auto, 560px);
+ grid-gap: 69px;
+}
+/* about block */
+.about-me__title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: 0.01em;
+    margin-top: -1px;
+    
+}
+.about-me__border{
+    margin-top: 15px;
+    max-width: 560px;
+    height: 4px;
+    background: #19849B;
+}
+.about-me__heading-text{
+    margin-top: 13px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+}
+.about-me__myself-text{
+    margin-top: 29px;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+}
+.about-me__contact-btn{
+    height: 50px;
+    margin-top: 30px;
+    background: var(--black-color);
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid var(--white-color);
+    width: 52.5%;
+}
+/* Portfolio block */
+.portfolio__title{
+    margin-top: 105px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+}
+.portfolit__text{
+    margin-top: 14px;
+    max-width:766px;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+}
+.portfolit__gallery{
+    margin-top: 27px;
+    max-width: 1038px;
+    min-height: 509px;
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    
+}
+.gallery__image{
+    width: 244px;
+    height: 244px;
+}
+/* footer block */
