@@ -206,7 +206,7 @@ main{
     .main__avatar{
         width: 100%;
         height: 355px;
-        background-image: url("./assets/table_header__avatar.png");
+        background-image: url("./assets/table_main__avatar.png");
         background-position: center;
     }
     .main__about-author{
@@ -248,3 +248,52 @@ main{
     
     }
 }
+@media (max-width: 425px){
+    :root{
+        --width-content: 341px;
+    }
+    .main__container{
+        grid-template-rows: minmax(auto,auto) minmax(586px,auto);
+        margin-left: 4.7%;
+        margin-right: 4.7%;
+    }
+    .main__avatar{
+        width: 100%;
+        height: 355px;
+        background-image: url("./assets/mobile-main_avatar.png");
+        background-position: center;
+    }
+    .about-me__title{
+        margin-top: 62px;
+           
+    }
+    .about-me__contact-btn{
+        max-width: 340px;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .main__portfolio{
+        min-height: 532;
+    }
+    .portfolio__title{
+        margin-top: 40px;
+        margin-left: -2px;
+    }
+    .portfolit__text{
+        margin-top: 8px;
+        margin-left: -2px;
+    }
+    .portfolit__gallery{
+        min-height: 375px;
+        margin-top: 36px;
+        margin-left: -2px;
+        margin-bottom: 38px;
+    }
+    .gallery__image{
+        width: 165px;
+        height: 165px;
+        margin-bottom: 15px;
+    }
+}
+
+
