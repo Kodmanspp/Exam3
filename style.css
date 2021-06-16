@@ -13,6 +13,7 @@
     color: var(--white-color);
 }
 body{
+    position: relative;
     max-width: var(--width-body);
 }
 header{
@@ -31,6 +32,14 @@ main{
     max-width: var(--width-content);
     margin: 0px auto; 
 }
+
+
+
+
+
+/* --------------------------------------------------------------------- */
+/* header css prop */
+/* --------------------------------------------------------------------- */
 .header__title{
     max-height: 34px;
     min-width: 265px;
@@ -41,9 +50,15 @@ main{
     text-transform: uppercase;
     margin-right: 9px;
 }
+
+
+
+
+
 /* --------------------------------------------------------------------- */
 /* main css prop */
 /* --------------------------------------------------------------------- */
+
 .main__container{
     padding-top: 51px;
     margin-left: 15.7%;
@@ -62,7 +77,14 @@ main{
  grid-template-columns: minmax(auto,411px) minmax(auto, 560px);
  grid-gap: 69px;
 }
-/* about block */
+
+
+
+
+
+/* --------------------------------------------------------------------- */
+/* main <about> css prop */
+/* --------------------------------------------------------------------- */
 .about-me__title{
     font-style: normal;
     font-weight: bold;
@@ -91,9 +113,7 @@ main{
     line-height: 18px;
     letter-spacing: 0.01em;
 }
-.about-me__contact-btn{
-    height: 50px;
-    margin-top: 30px;
+.button{
     background: var(--black-color);
     font-size: 18px;
     line-height: 21px;
@@ -101,9 +121,20 @@ main{
     letter-spacing: 2px;
     text-transform: uppercase;
     border: 1px solid var(--white-color);
+}
+.about-me__contact-btn{
+    height: 50px;
+    margin-top: 30px;
     width: 52.5%;
 }
-/* Portfolio block */
+
+
+
+
+
+/* --------------------------------------------------------------------- */
+/* main <portfolio> css prop */
+/* --------------------------------------------------------------------- */
 .portfolio__title{
     margin-top: 105px;
     font-weight: bold;
@@ -128,15 +159,23 @@ main{
     align-content: space-between;
 }
 .gallery__id{
-    width: 244px;
-    height: 244px;
+    max-width: 244px;
+    max-height: 244px;
+    background: #19849B;
 }
 .gallery__image{
     width: 100%;
     height: 100%;
    
 }
-/* footer block */
+
+
+
+
+
+/* --------------------------------------------------------------------- */
+/* footer css prop */
+/* --------------------------------------------------------------------- */
 .footer__top-content{
     max-width: 100%;
     min-height: 161px;
@@ -178,8 +217,6 @@ main{
     letter-spacing: 0.01em;
 
 }
-
-
 .footer__bottom-content{
     min-height: 44px;
     max-width: var(--width-body);
@@ -197,6 +234,141 @@ main{
     margin-top: 2px; 
 }
 
+
+
+
+
+/* --------------------------------------------------------------------- */
+/* contact Modal css prop */
+/* --------------------------------------------------------------------- */
+.modal-contact{
+    top: 0px;
+    left: 0px;
+    transition: all 0.5s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: none;
+    background: rgba(25, 132, 155);
+    background: rgba(25, 132, 155, 0.3);
+    opacity: 0;
+    visibility: hidden;  
+}
+.contact-me__modal-content{
+    margin: 25% 14% 50% 30%;
+    width: 50%;
+    height: 40%;
+    max-height: 600px;
+    background: var(--black-color);
+}
+.contact-me__modal-container{
+    display: grid;
+    grid-template-rows:  minmax(94px, auto) minmax(78px,auto) minmax(367px, auto);
+    grid-template-columns: 1fr;
+    max-width: 568px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.contact-me__modal-title{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    margin-top: 51px;
+}
+.contact-me__modal-text{
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    
+}
+.contact-me__modal-form{
+    display: grid; 
+    grid-template-rows: minmax(50px, auto) minmax(auto, auto) minmax(237px,auto) minmax(80px,auto);
+    grid-template-columns: minmax(0px, 200px) minmax(0px,350px);
+    grid-column-gap: 20px; 
+}
+.contact-me__modal-name{
+    padding-left: 15px;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    background: #324B53;
+    color: #8EA5AC;
+}
+.contact-me__modal-surname{
+    padding-left: 21px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+}
+.contact-me__modal-form input[type="text"], .contact-me__modal-form textarea{
+    background: #324B53;
+    color: #8EA5AC;
+    border: none;
+    padding: 10px 5px 10px 5px;
+    font-size: 15px;
+}
+.contact-me__modal-textarea{
+    margin-top: 20px;
+    grid-column: 1/3;
+    grid-row: 2/4;  
+    resize: none;
+}
+.contact-me__modal-btn{
+    margin-top: 29px;
+    max-width: 218px;
+    grid-column: 1/3;
+}
+
+
+
+
+/* --------------------------------------------------------------------- */
+/* Modal Gallery css prop */
+/* --------------------------------------------------------------------- */
+.modal-gallery{
+    top: 0px;
+    left: 0px;
+    transition: all 0.2s;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: none;
+    background: rgba(25, 132, 155);
+    background: rgba(25, 132, 155, 0.3);
+    display: flex;
+    padding: 15% 15% 15% 1%;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;  
+}
+.gallery-modal{
+    max-width: 1440px;
+    width: 35%;
+    height: 45.4%;
+    display: grid;
+    grid-template-rows: 30px minmax(auto, 675px);
+    grid-gap: 28px;
+    margin-bottom: 10%;
+}
+.gallery-close{
+    background: rgba(25, 132, 155, 0.3);
+    max-width: 150px;
+    margin-left: auto;
+}
+.gallery-modal__image{
+    width: 100%;
+}
+
+
+
+
+
+/* --------------------------------------------------------------------- */
+/* Media table css prop */
+/* --------------------------------------------------------------------- */
 @media (max-width: 900px){
 :root{
     --width-content: 762px;
@@ -247,11 +419,36 @@ main{
         width: 180px;
         height: 180px;
     }
+    .gallery__id{
+        max-width: 179px;
+        max-height: 179px;
+    }
     .footer__top-content{
         min-height: 161px;
     
     }
+    .contact-me__modal-content{
+        margin: 47.5% 14% 50% 14%;
+        width: 73%;
+        max-height: 36.5%;
+    }
+    .contact-me__modal-container{
+        margin-left: 47px;
+
+    }
+
+    .gallery-modal{
+        margin-top: 30%;
+        width: 90%;
+    }
 }
+
+
+
+
+/* --------------------------------------------------------------------- */
+/* media phone css prop */
+/* --------------------------------------------------------------------- */
 @media (max-width: 425px){
     :root{
         --width-content: 341px;
@@ -269,7 +466,7 @@ main{
     }
     .about-me__title{
         margin-top: 62px;
-           
+        
     }
     .about-me__contact-btn{
         max-width: 340px;
@@ -293,22 +490,68 @@ main{
         margin-left: -2px;
         margin-bottom: 38px;
     }
+    .gallery__id{
+        max-width: 164px;
+        max-height: 164px;
+        margin-bottom: 16px;
+    }
     .gallery__image{
         width: 165px;
         height: 165px;
-        margin-bottom: 15px;
+    }
+    .contact-me__modal-content{
+        max-height: 900px;
+        
+    }
+    .contact-me__modal-container{
+        text-align: center;
+        grid-template-rows:  minmax(94px, auto) minmax(180px,auto) minmax(367px, auto);
+        grid-template-columns: minmax(0px, 375px);
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .contact-me__modal-form{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .contact-me__modal-name{
+        min-height: 50px;
+        margin-bottom: 30px;
+    }
+    .contact-me__modal-surname{
+        min-height: 50px;
+        margin-bottom: 30px;
+    }
+    .contact-me__modal-textarea{
+        min-height: 200px;
+        margin-bottom: 10px;
+    }
+    .contact-me__modal-btn{
+        min-height: 50px;
+        margin-left: 6%;
+    }
+    
+}
+@media (max-width: 320px){
+    .portfolit__gallery{
+        margin-left: 21%;
     }
 }
 
-.about-me__contact-btn:hover{
-    background: #19849B;
-}
-.gallery__id{
+
+
+
+/* --------------------------------------------------------------------- */
+/* effect css prop */
+/* --------------------------------------------------------------------- */
+.button:hover{
     background: #19849B;
 }
 .gallery__image:hover {
     opacity: 0.5;
     
 }
-
-
+.placeholder-red::-webkit-input-placeholder {
+    color: rgb(248, 105, 105);
+ }
