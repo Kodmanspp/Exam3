@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 :root{
-    --width-body: 1440px; 
+    --width-body: 100%; 
     --width-content: 1038px;
     --white-color: #FFFFFF; 
     --black-color: #272A2F;
@@ -442,7 +442,12 @@ main{
         width: 90%;
     }
 }
-
+@media (min-width: 1450px){
+    .container{
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
 
 
 
@@ -533,7 +538,7 @@ main{
     }
     
 }
-@media (max-width: 320px){
+@media (max-width: 360px){
     .portfolit__gallery{
         margin-left: 21%;
     }
